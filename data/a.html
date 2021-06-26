@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>
+			Telone asserts per province
+		</title>
+		<!-- Leaflet -->
+		<link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+		<script src="lib/leaflet/leaflet.js"></script>                       
+        <script src="data/Customer_province.geojson"></script>
+
+		<style type="text/css">
+			#map { height : 400px; }
+		</style>
+	</head>
+	<body>
+		<h1>Telone assets per province</h1>
+	    <div id="map"></div>
+		<script>
+		
+			function countriesStyle(feature){
+				return {
+					fillColor : 'red',
+					weight : 2,
+					opacity : 1,
+					color : 'white',
+					dashArray : 3,
+					fillOpacity : 0.7
+				}
+			}
+		var map = L.map('map').setView([-17.8476, 31.3564], 6);
+		
+        // map with no style    
+        // var zimprovinceLayer=L.geoJson(Customer_province).addTo(map);
+        
+        // Map with style
+        var zimprovinceLayer=L.geoJson(Customer_province,{style: countriesStyle}).addTo(map);
+        
+		map.fitBounds(zimprovinceLayer.getBounds());
+		</script>
+	</body>
+</html>

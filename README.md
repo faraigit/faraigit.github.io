@@ -5,4 +5,4 @@ I recently graduated from the university of [university of pretoria](https://www
 ### Education
 1. -PhD Environment & Society
 2. -MA Environmental Policy and Planning
-3. -BA Hons Geography
+3. BA Hons Geography
